@@ -1,5 +1,3 @@
-// /* eslint-disable */
-
 import React from 'react';
 import propTypes from 'prop-types'
 import style from './StyleInputs.css';
