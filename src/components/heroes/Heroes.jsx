@@ -9,17 +9,20 @@ class Heroes extends Component {
 
     static propTypes = {
         heroes: propTypes.instanceOf(Array).isRequired,
-        func: propTypes.func.isRequired
+        func: propTypes.func.isRequired,
+        deletehero: propTypes.func.isRequired,
+        inform: propTypes.func.isRequired,
+        addhero: propTypes.func.isRequired,
     }
 
     render() {
-        const { heroes, func } = this.props
+        const { heroes, func, deletehero, inform, addhero } = this.props
 
         return (
             <div className={ style.heroes }>
                 <h2 className={ style.title }>Heroes</h2>
                 <Input func={func} />
-                {heroes.map(item => <Card key={item.id} heroes={ item } />)}
+                {heroes.map(item => <Card addhero={ addhero } inform={ inform } deletehero={ deletehero } key={item.id} heroes={ item } />)}
             </div>
         );
     }

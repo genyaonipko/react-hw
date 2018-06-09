@@ -1,0 +1,33 @@
+.saved {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 10px;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.heroes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}

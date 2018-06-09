@@ -1,0 +1,25 @@
+
+.squad {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 10px;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.cardcontainer {
+    width: 100%;
+    margin-top: 20px;
+}
