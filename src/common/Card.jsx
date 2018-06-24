@@ -1,27 +1,27 @@
 import React from 'react';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import style from './StyleInputs.css';
 
 
 
-const Card = ({ heroes, deletehero, inform, addhero, isAdded }) => (
+const Card = ({ hero, deletehero, inform, addhero, isAdded }) => (
     <div className={ style.card }>
-        <h2 className={ style.title }>{ heroes.name }</h2>
+        <h2 className={ style.title }>{ hero.name }</h2>
         <div>
-            {!isAdded ? <button onClick={ addhero } name={ heroes.name } className={ style.plus }>&#43;</button> : ''}
-            <button onClick={ deletehero } name={ heroes.name } className={ style.delete }>&#8416;</button>
-            <button onClick={ inform } name={ heroes.name } className={ style.inform }>&#8505;</button>
+            {!isAdded ? <button onClick={ addhero } name={ hero.name } className={ style.plus }>&#43;</button> : ''}
+            <button onClick={deletehero} name={ hero.name } className={ style.delete }>&#8416;</button>
+            <button onClick={ inform } name={ hero.name } className={ style.inform }>&#8505;</button>
         </div>
     </div>
 ) 
 
 
 Card.propTypes = {
-    heroes: propTypes.shape().isRequired,
-    deletehero: propTypes.func.isRequired,
-    inform: propTypes.func.isRequired,
-    addhero: propTypes.func.isRequired,
-    isAdded: propTypes.bool.isRequired
+    hero: PropTypes.shape().isRequired,
+    deletehero: PropTypes.func.isRequired,
+    inform: PropTypes.func.isRequired,
+    addhero: PropTypes.func.isRequired,
+    isAdded: PropTypes.bool.isRequired
 }
 
 Card.defaultProps = {

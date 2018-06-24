@@ -10,7 +10,7 @@ const processApiResponse = ({ response, successCode, errorMessage }) => ({
 
 export const fetchAllCards = () =>
     axios
-        .get('http://localhost:3001/heroes')
+        .get('/heroes')
         .then(response =>
             processApiResponse({
                 response,
@@ -20,9 +20,9 @@ export const fetchAllCards = () =>
         )
         .catch(handlePromiseError);
 
-export const deleteCardHero = id =>
+export const deleteHero = id =>
     axios
-        .delete(`http://localhost:3001/heroes/${id}`)
+        .delete(`/heroes/${id}`)
         .then(response =>
             processApiResponse({
                 response,
@@ -32,9 +32,9 @@ export const deleteCardHero = id =>
         )
         .catch(handlePromiseError);
 
-export const addCardHero = hero =>
+export const addHero = hero =>
     axios
-        .post('http://localhost:3001/heroes/', hero)
+        .post('/heroes/', hero)
         .then(response =>
         processApiResponse({
             response,
@@ -46,7 +46,7 @@ export const addCardHero = hero =>
 
 export const addToSquad = squad =>
     axios
-        .post('http://localhost:3001/squads/', squad)
+        .post('/squads/', squad)
         .then(response =>
         processApiResponse({
             response,
@@ -58,7 +58,7 @@ export const addToSquad = squad =>
 
 export const fetchAllSquads = () =>
     axios
-        .get('http://localhost:3001/squads')
+        .get('/squads')
         .then(response =>
             processApiResponse({
                 response,
@@ -70,7 +70,7 @@ export const fetchAllSquads = () =>
 
 export const deleteSquad = id =>
     axios
-        .delete(`http://localhost:3001/squads/${id}`)
+        .delete(`/squads/${id}`)
         .then(response =>
             processApiResponse({
                 response,

@@ -20,10 +20,10 @@
     "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-flowtype": "2.39.1",
-    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "7.4.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-react": "^7.9.1",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
@@ -59,13 +59,15 @@
     "lint:fix-js": "eslint --fix src/**/*.{js,jsx}",
     "lint:fix-css": "stylelint --fix src/**/*.css",
     "lint:fix": "yarn lint:fix-js && yarn lint:fix-css",
-    "format": "prettier --write '**/*.{js,css,md}'"
+    "format": "prettier --write '**/*.{js,css,md}'",
+    "prettier-watch": "onchange '**/*.jsx' --prettier --write {{changed}}"
   },
+  "proxy": "http://localhost:3001",
   "devDependencies": {
     "eslint": "4.1.1",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-prettier": "^2.9.0",
-    "prettier": "^1.13.4"
+    "prettier": "^1.13.5"
   },
   "jest": {
     "collectCoverageFrom": [

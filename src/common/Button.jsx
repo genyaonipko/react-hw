@@ -1,14 +1,23 @@
 import React from 'react';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import style from './StyleInputs.css';
 
 const Button = ({ submit, title }) => (
-        <input className={ style.button } onClick={ submit } type="submit" value={ title }/>
-    )
+  <input
+    className={style.button}
+    onClick={submit}
+    type="submit"
+    value={title}
+  />
+);
 
 Button.propTypes = {
-    submit: propTypes.func.isRequired,
-    title: propTypes.string.isRequired
-}
+  submit: PropTypes.func,
+  title: PropTypes.string.isRequired,
+};
 
-export default Button
+Button.defaultProps = {
+  submit: () => console.log('submit'),
+};
+
+export default Button;

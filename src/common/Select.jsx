@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import style from './StyleInputs.css';
 
 
@@ -15,8 +15,8 @@ const Select = ({ ability, func }) => {
 }
 
 Select.propTypes = {
-    ability: propTypes.string.isRequired,
-    func: propTypes.func.isRequired
+    ability: PropTypes.string.isRequired,
+    func: PropTypes.func.isRequired
 }
 
 export default Select
