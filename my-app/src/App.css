@@ -1,0 +1,12 @@
+.wrapper {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.heroes {
+    width: 25%;
+}
